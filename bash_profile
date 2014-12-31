@@ -17,8 +17,8 @@ export BASH_IT_THEME='zork'
 export GIT_HOSTING='travs@github.com'
 
 # Set my editor and git editor
-export EDITOR="atom"
-export GIT_EDITOR='atom'
+export EDITOR="mvim"
+export GIT_EDITOR='mvim'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
