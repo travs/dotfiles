@@ -16,6 +16,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'junegunn/vim-slash'
+Plug 'moll/vim-bbye'
 call plug#end()
 
 filetype plugin indent on
