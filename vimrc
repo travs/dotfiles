@@ -17,22 +17,27 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'junegunn/vim-slash'
 Plug 'moll/vim-bbye'
+Plug 'lervag/vimtex'
+Plug 'junegunn/vim-easy-align'
+Plug 'dylanaraps/wal.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
 call plug#end()
 
 filetype plugin indent on
 
 syntax on   " hilighting
-colorscheme  railscasts " bubblegum-256-light
+colorscheme  wal
+hi Normal ctermbg=NONE      " remove background color
 
-set number 	" turn on line numbers 
-set shortmess+=I		"Remove splash screen
+set number 	                " turn on line numbers 
+set shortmess+=I		    " remove splash screen
 
 set tabstop=4
 set shiftwidth=2
 set softtabstop=0
 set smarttab
-
 set expandtab
+" set smartcase
 
 " set tab to cycle buffers
 :nnoremap <Tab> :bnext<CR>
@@ -55,3 +60,9 @@ autocmd FileType solidity setlocal shiftwidth=4
 
 " linter settings
 " let g:ale_lint_delay = 5000
+
+" >using a mouse
+set mouse=a
+
+" CtrlP
+let g:ctrlp_cmd = 'CtrlPMRU'
