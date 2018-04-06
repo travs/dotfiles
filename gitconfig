@@ -1,0 +1,22 @@
+[core]
+	editor = vim
+	autocrlf = input
+    excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+    cp = cherry-pick
+	last = !git --no-pager log -1 HEAD
+	ds = diff --staged
+	adog = log --all --decorate --oneline --graph
+	dog = log --decorate --oneline --graph
+  ss = status --short
+[merge]
+	tool = meld
+[include]
+    path = ~/.gitconfig.local
+[init]
+	templatedir = /home/travis/.git-templates
