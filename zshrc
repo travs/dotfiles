@@ -14,6 +14,7 @@ source ~/.nix-profile/etc/profile.d/nix.sh
 # USER CONFIG
 ## Aliases
 alias '$'=''    # ignore $ at front of pasted commands
+alias p='sudo pacman'
 alias pwl='wal -qc -a 90 -i ~/.config/wall.png'
 alias pwll='wal -qc -l -a 90 -i ~/.config/wall.png'
 alias genfilename='date +%s | sha224sum | base64 | head -c 12 ; echo'
@@ -40,5 +41,8 @@ export PATH="$PATH:/home/travis/.gem/ruby/2.4.0/bin"
 # Add Rust binaries to path
 export PATH="$PATH:/home/travis/.cargo/bin"
 
-(cat ~/.cache/wal/sequences &)
+# Add node 
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
 
+(cat ~/.cache/wal/sequences &)

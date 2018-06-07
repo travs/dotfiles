@@ -10,7 +10,7 @@ gaps inner 15
 gaps outer 5
 font pango:mono 9
 focus_follows_mouse no
-set $mod Mod1
+set $mod Mod4
 set $term --no-startup-id i3-sensible-terminal
 set $video --no-startup-id bash video.sh
 set $stoprec --no-startup-id killall ffmpeg
@@ -43,6 +43,8 @@ exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
 #Map caps to esc
 exec "setxkbmap -option caps:escape"
+#Start autimatic disk mounting
+exec --no-startup-id "udiskie &"
 
 #OPENRC
 #set $shutdown sudo openrc-shutdown -p
@@ -374,7 +376,7 @@ for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 # Searches for an earlier tmux instance,
 # otherwise starts a new one (to prevent multiple dropdown sessions).
-exec --no-startup-id $term -title dropdown -e ~/.scripts/tmuxstart.sh
+# exec --no-startup-id $term -title dropdown -e ~/.scripts/tmuxstart.sh
 # Runs neofetch on first tmux screen if installed.
 # exec_always --no-startup-id "tmux send-keys -t 0:0 'clear && neofetch 2>/dev/null' Enter"
 

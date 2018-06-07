@@ -64,5 +64,15 @@ autocmd FileType solidity setlocal shiftwidth=4
 " >using a mouse
 set mouse=a
 
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
+" only hide buffers when switching
+set hidden
+
 " CtrlP
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
