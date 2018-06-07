@@ -19,7 +19,7 @@ set $stoprec --no-startup-id killall ffmpeg
 
 # #---Starting External Scripts---# #
 #Increase key rate
-exec --no-startup-id xset r rate 190 40
+exec_always --no-startup-id xset r rate 190 40
 #Music player daemon:
 exec --no-startup-id mpd
 #Torrent daemon:
@@ -42,7 +42,7 @@ exec --no-startup-id unclutter
 #Network Manager applet
 exec --no-startup-id nm-applet
 #Map caps to esc
-exec "setxkbmap -option caps:escape"
+exec_always "setxkbmap -option caps:escape"
 #Start autimatic disk mounting
 exec --no-startup-id "udiskie &"
 
@@ -185,7 +185,7 @@ bindsym $mod+Shift+a		exec $term -e ncpamixer
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s	gaps inner current minus 5
 
-bindsym $mod+d			exec rofi -show run
+bindsym $mod+d          exec rofi -show run
 bindsym $mod+Shift+d	gaps inner current set 0; gaps outer current set 0
 
 bindsym $mod+f			fullscreen toggle
