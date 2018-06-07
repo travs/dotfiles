@@ -1,10 +1,9 @@
 # ZSH CONFIG
-export ZSH=/home/travis/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 plugins=(git)
 ZSH_THEME="ys"
 source $ZSH/oh-my-zsh.sh
-source ~/.sendgrid.env
 source /usr/share/nvm/init-nvm.sh
 source ~/.nix-profile/etc/profile.d/nix.sh
 
