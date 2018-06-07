@@ -37,7 +37,7 @@ URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
 !! Extensions
-URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select
+URxvt.perl-ext-common:	default,matcher,font-size,url-select,keyboard-select
 URxvt.colorUL:		#4682B4
 !! url-select
 URxvt.keysym.M-u:	perl:url-select:select_next
@@ -45,9 +45,6 @@ URxvt.url-select.launcher: webview
 URxvt.url-select.underline: true
 !! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-!! resize-font
-URxvt.resize-font.smaller:	C-Down
-URxvt.resize-font.bigger:	C-Up
 !! Matcher
 URxvt.url-launcher:	/usr/bin/chromium
 URxvt.matcher.button:	1
@@ -60,6 +57,9 @@ URxvt.keysym.Control-Right:  \033[1;5C
 URxvt*scrollTtyOutput:      false
 URxvt*scrollWithBuffer:     true
 URxvt*scrollTtyKeypress:    true
+!! Disable "Picture insert mode" and "ISO 14755 mode" activation combinations
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 rofi.color-enabled:	    true
 rofi.color-window:	    #000, #000, #000
